@@ -5,7 +5,7 @@
 .log-in-section {
   height: 100vh;
   width: 100vw;
-  background-color:blanchedalmond;
+  background-color:var(--fill-color);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -26,23 +26,23 @@
   top: 32px;
 }
 
-.log-in-container button {
+.log-in-container a {
   margin-top: 8px;
 }
 
 .log-in-container a {
   display: inline-block;
   padding: 4px 10px;
-  color:darkcyan;
+  color: var(--clickable-color);
   text-decoration: none;
-  margin: 8px;
-  border: 1px solid darkcyan;
+  margin: 16px;
+  border: 2px solid var(--clickable-color);
   border-radius: 5px;
   text-transform: uppercase;
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
 .log-in-container a:hover {
-  background-color: darkcyan;
+  background-color: var(--clickable-color);
   color: white;
 }
