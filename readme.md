@@ -13,4 +13,4 @@ De no ser asi, se deberia levantar el servidor manualmente con sistemas como APA
 
 Este proyecto no usa Semantic Version. En lugar de esto, las versiones de los tags corresponden a la fecha en la cual se realizo la transmision en vivo en Twitch.
 
-DarkDreizer(www.twitch.com/darkdreizer)
+[DarkDreizer](www.twitch.com/darkdreizer)
