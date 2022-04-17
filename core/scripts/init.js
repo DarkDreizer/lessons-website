@@ -2,7 +2,7 @@
 import { getRoute } from "./router.js";
 
 window.onpopstate = function(event) {
-  getRoute(event.state.identifier);
+  getRoute(event.state.identifier, true);
 }
 
 const loader = '<div class="loader"><span>Cargando...</span></div>';

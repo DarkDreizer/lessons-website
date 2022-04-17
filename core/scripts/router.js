@@ -1,16 +1,16 @@
 import { mainRoutes } from "../const/routes.js";
 
-export function getRoute(routeRef) {
+export function getRoute(routeRef, hMove= false) {
   fetch(mainRoutes.get(routeRef).html)
   .then(template => template.text())
   .then(html => {
-    loadPage(mainRoutes.get(routeRef), html, true);
+    loadPage(mainRoutes.get(routeRef), html, true, hMove);
     addNavHandlers();
   });
 }
 
 
-function loadPage(routeObject, html, replaceAll = false) {
+function loadPage(routeObject, html, replaceAll = false, hMove) {
   let target;
   if (replaceAll) {
     target = document.body;
@@ -27,10 +27,15 @@ function loadPage(routeObject, html, replaceAll = false) {
     scripts.src = routeObject.script + `?${timeStamp.getTime()}`;
     target.appendChild(scripts);
   }
-  history.pushState(
-    routeObject, 
-    null, 
-    routeObject.displayURL === 'index.html' ? new URL('http://127.0.0.1:5500/index.html') : routeObject.displayURL);
+  if (!hMove){
+    history.pushState(
+      routeObject, 
+      '', 
+      routeObject.displayURL === 'index.html' ? 
+      new URL('http://127.0.0.1:5500/index.html') : 
+      routeObject.displayURL);
+  }
+  
 }
 
 function addNavHandlers() {
