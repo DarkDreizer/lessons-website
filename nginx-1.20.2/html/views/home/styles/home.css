@@ -1,0 +1,57 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.top-bar span {
+  font-size: 0.625rem;
+}
+
+.top-bar a {
+  display: inline-block;
+}
+
+.main-nav {
+  width: 100vw;
+  box-shadow: 1px 2px 4px 0px var(--shadow-color);
+}
+
+.main-nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 16px;
+  background-color: var(--fill-color);
+}
+
+.main-nav span {
+  position: relative;
+}
+
+.main-nav span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.news {
+  padding: 16px;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 200px;
+  font-size: 0.5rem;
+  text-align: right;
+  margin-top: 8px;
+}
+
+.sub-menu p {
+  margin-bottom: 0;
+}
+
+.sub-menu.sub-menu-open {
+  display: block;
+}
