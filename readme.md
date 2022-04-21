@@ -5,9 +5,16 @@ Este es el proyecto por medio del cual estamos practicando los conceptos aprendi
 ## Como ejecutar el proyecto
 
 Para que el navegador pueda leer el sitio web es necesario utilizar un servidor local.
-Si se utiliza VSCode u otro ambiente de trabajo que tenga capacidad para levantar un servidor, es posible utilizar cosas como el LiveServer de VSCode.
+Debido a que hicimos cambios en la aplicacion para hacerla una SPA es necesario que el servidor local sea capaz de redireccionar las rutas del sitio hacia el index.html.
 
-De no ser asi, se deberia levantar el servidor manualmente con sistemas como APACHE.
+Actualmente el repositorio tiene la configuracion utilizando Nginx.
+Para utilizar el servidor es necesario acceder a la carpeta de nginx-1.20.2 y utilizar el comando `start nginx.exe`
+
+Esto levantara el servidor, el cual es una aplicacion de consola. Luego de esto se puede acceder al sitio en la ruta 127.0.0.1.
+Nginx no esta configurado para hacer hotreload, por lo que se recomienda refrescar el navegador con un "hard reload" para borrar el cache del estado en el que se encuentra.
+En algunos casos tambien será necesario refrescar el servidor, esto se puede hacer utilizando `nginx -s reload` desde la carpeta principal.
+
+Al terminar de usar la aplicación se debe utilizar el comando `nginx -s stop` para detener el servidor y liberar el puerto.
 
 ## Versiones (Semantic Version)
 
