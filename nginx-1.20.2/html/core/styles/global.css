@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
-  font-size: 225%;
+  font-size: 150%;
 }
 
 body {
@@ -21,4 +21,8 @@ a {
 
 span {
   line-height: 27px;
+}
+
+p {
+  font-size: 0.75rem;
 }

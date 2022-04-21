@@ -23,12 +23,17 @@ function openMenu(event) {
   }
 }
 
-const newsContainer = document.querySelector('.news');
+const lessonsContainer = document.querySelector('.lessons');
 
 function loadNews() {
-  const currentId = 1;
-  const newLesson = lesson(currentId, 'HTML', 'Este es un curso de HTML', 'https://www.google.com');
-  newsContainer.appendChild(newLesson.template);
+  fetch('views/home/const/lessons.json')
+    .then((result) => result.json())
+    .then((lessons) => {
+      lessons.forEach((lessonInfo) => {
+        const newLesson = lesson(lessonInfo);
+        lessonsContainer.appendChild(newLesson.template);
+      })
+    })  
 }
 
 loadNews();

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Programación web desde cero",
+    "description": "Conoce que se necesita para ser un desarrollador web y que oportunidades laborales existen",
+    "pLink": "https://docs.google.com/presentation/u/0/d/1NROOIb6qh9mS1g9r6g7eDggdCtqRYWIo246H0N8HbZ8/edit",
+    "rLink": "https://github.com/DarkDreizer/programacion_web_desde_cero",
+    "sLink": "https://stackblitz.com/edit/programacion-web-desde-cero?file=index.html"
+  }, {
+    "id": 2,
+    "title": "Profundizando HTML y CSS",
+    "description": "Aprende los conceptos básicos de los lenguajes HTML y CSS",
+    "pLink": "https://docs.google.com/presentation/u/0/d/1_sTox-E14pCHCo1iOzaw8PAdt__ZApoC3MuaBf9NJ6A/edit",
+    "rLink": "https://github.com/DarkDreizer/profundizando-html-css",
+    "sLink": "https://stackblitz.com/edit/profundizando-html-css?file=index.html",
+    "additional": [
+      {
+        "title": "A complete guide to flexbox",
+        "link": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+      },{
+        "title": "A complete guide to grid",
+        "link": "https://css-tricks.com/snippets/css/complete-guide-grid/"
+      }
+    ]
+  }
+]

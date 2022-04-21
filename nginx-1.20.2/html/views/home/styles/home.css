@@ -34,8 +34,16 @@
   cursor: pointer;
 }
 
-.news {
+.lessons {
   padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.lessons div a {
+  display: inline-block;
+  margin-right: 8px;
 }
 
 .sub-menu {
