@@ -27,14 +27,14 @@ function loadPage(routeObject, html, replaceAll = false, hMove) {
     scripts.src = routeObject.script + `?${timeStamp.getTime()}`;
     target.appendChild(scripts);
   }
-  if (!hMove){
-    history.pushState(
-      routeObject, 
-      '', 
-      routeObject.displayURL === 'index.html' ? 
-      new URL('http://127.0.0.1:5500/index.html') : 
-      routeObject.displayURL);
-  }
+  // if (!hMove){
+  //   history.pushState(
+  //     routeObject, 
+  //     '', 
+  //     routeObject.displayURL === 'index.html' ? 
+  //     new URL('http://127.0.0.1:5500/index.html') : 
+  //     routeObject.displayURL);
+  // }
   
 }
 

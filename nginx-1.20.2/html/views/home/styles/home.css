@@ -25,6 +25,33 @@
   background-color: var(--fill-color);
 }
 
+.main-nav span {
+  position: relative;
+}
+
+.main-nav span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .news {
   padding: 16px;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 200px;
+  font-size: 0.5rem;
+  text-align: right;
+  margin-top: 8px;
+}
+
+.sub-menu p {
+  margin-bottom: 0;
+}
+
+.sub-menu.sub-menu-open {
+  display: block;
 }

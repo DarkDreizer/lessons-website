@@ -6,7 +6,7 @@ mainRoutes.set('log-in', {
   style: '../../views/log-in/styles/log-in.css',
   script: null,
   title: 'Lessons',
-  displayURL: 'index.html'
+  displayURL: ''
 });
 
 mainRoutes.set('home', {
@@ -15,6 +15,15 @@ mainRoutes.set('home', {
   style: '../../views/home/styles/home.css',
   script: '../../views/home/scripts/home.js',
   title: 'Lessons - Home',
-  displayURL: 'index.html/home'
+  displayURL: '/home'
+});
+
+mainRoutes.set('not-found', {
+  html: '../../views/not-found/not-found.html',
+  identifier: 'not-found',
+  style: '../../views/styles/not-found.css',
+  script: null,
+  title: 'Lessons - Not Found',
+  displayURL: '/not-found'
 })
 
