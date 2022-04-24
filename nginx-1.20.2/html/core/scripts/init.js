@@ -5,6 +5,8 @@ window.onpopstate = function(event) {
   getRoute(event.state.identifier, true);
 }
 
+document.cookie = 'SameSite=None'
+
 let routeToLoad;
 switch(window.location.pathname){
   case '/':

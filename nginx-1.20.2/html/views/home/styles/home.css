@@ -5,7 +5,7 @@
 }
 
 .top-bar span {
-  font-size: 0.625rem;
+  font-size: var(--small-header-text-size);
 }
 
 .top-bar a {
@@ -18,30 +18,53 @@
 }
 
 .main-nav ul {
-  width: 100%;
   display: flex;
   justify-content: space-around;
   padding: 8px 16px;
   background-color: var(--fill-color);
 }
 
-.main-nav span {
+.main-nav li {
   position: relative;
 }
 
-.main-nav span:hover {
+.main-nav li:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.lessons {
+.main-nav li a {
+  font-size: var(--header-text-size);
+}
+
+.last-lessons-container {
   padding: 16px;
+}
+
+.last-lessons {
+  margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 16px;
 }
 
-.lessons div a {
+.last-lessons .unit-lesson {
+  padding: 8px;
+  border: 1px solid var(--shadow-color);
+  box-shadow: 1px 1px 1px 0 var(--shadow-color);
+  border-radius: 6px;
+}
+
+.last-lessons .unit-lesson h3 {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.last-lessons .unit-lesson p {
+  margin-bottom: 8px;
+}
+
+.last-lessons div a {
   display: inline-block;
   margin-right: 8px;
 }

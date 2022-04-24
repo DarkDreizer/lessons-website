@@ -23,17 +23,18 @@ function openMenu(event) {
   }
 }
 
-const lessonsContainer = document.querySelector('.lessons');
+const lastLessonsDiv = document.querySelector('.last-lessons');
 
-function loadNews() {
+function loadLastNews() {
   fetch('views/home/const/lessons.json')
     .then((result) => result.json())
-    .then((lessons) => {
-      lessons.forEach((lessonInfo) => {
-        const newLesson = lesson(lessonInfo);
-        lessonsContainer.appendChild(newLesson.template);
-      })
+    .then((lessonsInfo) => {
+      lessonsInfo.sort((aLesson, bLesson) => bLesson.id - aLesson.id);
+      for (let i=0; i < 4; i++){
+        const newLesson = lesson(lessonsInfo[i]);
+        lastLessonsDiv.appendChild(newLesson.template);
+      }
     })  
 }
 
-loadNews();
+loadLastNews();
