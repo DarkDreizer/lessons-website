@@ -1,3 +1,5 @@
+/* Este es codigo demostrativo de como redireccionar rutas para una SPA con PHP*/
+
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
