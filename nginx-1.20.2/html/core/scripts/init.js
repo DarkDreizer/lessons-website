@@ -5,8 +5,6 @@ window.onpopstate = function(event) {
   getRoute(event.state.identifier, true);
 }
 
-document.cookie = 'SameSite=None'
-
 let routeToLoad;
 switch(window.location.pathname){
   case '/':
@@ -15,6 +13,9 @@ switch(window.location.pathname){
   case '/home':
     routeToLoad = 'home';
     break;
+  case '/lessons':
+    routeToLoad = 'lessons';
+    break;
   default:
     routeToLoad = 'not-found';
 }
@@ -22,5 +23,5 @@ switch(window.location.pathname){
 const loader = '<div class="loader"><span>Cargando...</span></div>';
 document.body.innerHTML = loader;
 
-getRoute(routeToLoad);
+getRoute(routeToLoad, false, true);
 

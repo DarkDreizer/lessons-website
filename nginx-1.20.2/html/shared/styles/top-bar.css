@@ -1,0 +1,13 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.top-bar a.site-name {
+  font-size: var(--small-header-text-size);
+}
+
+.top-bar a {
+  display: inline-block;
+}
