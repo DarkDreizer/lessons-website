@@ -76,5 +76,21 @@
         "link": "https://docs.google.com/presentation/u/0/d/1Vw8hyv900lhERyx7YtKYZ5xcEaGHNriFtBnPom8UL_s/edit"
       }
     ]
+  },{
+    "id": 5,
+    "video": "https://www.youtube.com/embed/Cta8Vq47pag",
+    "title": "JavaScript desde 0",
+    "description": "Conociendo los conceptos necesarios para empezar a programar con JavaScript",
+    "pLink": "https://docs.google.com/presentation/u/0/d/1PYIfLTrHvqfHdTrzEBcCcbQtLS8vtyT0zMQ5Z0YG1kM/edit",
+    "rLink": "https://github.com/DarkDreizer/JavaScript/tree/feature/part1",
+    "sLink": "https://stackblitz.com/edit/javascript-parte-1?file=index.html"
+  },{
+    "id": 6,
+    "video": "https://www.youtube.com/embed/YcKDj5XQrHE",
+    "title": "JavaScript segunda parte",
+    "description": "Encapsulación, Métodos, Prototipos, Polimorfirsmo, Getters y Setters",
+    "pLink": "https://docs.google.com/presentation/u/0/d/1-nwQ0_JXguEtCFA7p9pM3fVxaPBdAJhcsicjOraLgSU/edit",
+    "rLink": "https://github.com/DarkDreizer/JavaScript/tree/feature/part2",
+    "sLink": "https://stackblitz.com/edit/javascript-parte-2?file=index.html"
   }
 ]

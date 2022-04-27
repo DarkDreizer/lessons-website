@@ -23,8 +23,8 @@ mainRoutes.set('home', {
 mainRoutes.set('lessons', {
   html: '../../views/lessons/lessons.html',
   identifier: 'lessons',
-  style: '',
-  script: null,
+  style: '../../views/lessons/styles/lessons.css',
+  script: '../../views/lessons/scripts/lessons.js',
   title: 'Lessons - List of lessons',
   displayURL: '/lessons',
   replace: false

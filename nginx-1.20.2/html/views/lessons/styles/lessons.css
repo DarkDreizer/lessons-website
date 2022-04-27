@@ -1,0 +1,36 @@
+.lessons-container {
+  padding: 16px;
+}
+
+.list-lessons {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.list-lessons .unit-lesson {
+  padding: 8px;
+  border: 1px solid var(--shadow-color);
+  box-shadow: 1px 1px 1px 0 var(--shadow-color);
+  border-radius: 6px;
+}
+
+.list-lessons .unit-lesson h3 {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.list-lessons .unit-lesson p {
+  margin-bottom: 8px;
+}
+
+.list-lessons div a {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.title-actions {
+  display: flex;
+  justify-content: space-between;
+}
