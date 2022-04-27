@@ -21,22 +21,5 @@
 
 .main-nav li a {
   font-size: var(--header-text-size);
-}
-
-.sub-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  width: 200px;
-  font-size: 0.5rem;
-  text-align: right;
-  margin-top: 8px;
-}
-
-.sub-menu p {
-  margin-bottom: 0;
-}
-
-.sub-menu.sub-menu-open {
-  display: block;
+  text-decoration: none;
 }

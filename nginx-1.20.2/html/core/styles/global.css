@@ -37,3 +37,7 @@ h2 {
 h3 {
   font-size: var(--small-header-text-size);
 }
+
+.nav-link.active {
+  text-decoration: underline;
+}

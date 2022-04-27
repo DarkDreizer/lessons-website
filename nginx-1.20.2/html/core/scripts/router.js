@@ -55,7 +55,14 @@ function addNavHandlers() {
       const hrefArray = anchor.href.split('/');
       const route = hrefArray[hrefArray.length - 1];
       getRoute(route);
-    })
+    });
+    const currentPath = window.location.pathname;
+    const classList = nav.classList;
+    if (nav.href.includes(currentPath) && !classList.contains('site-name')) {
+      nav.classList.add('active');
+    } else {
+      nav.classList.remove('active');
+    }
   })
 }
 
