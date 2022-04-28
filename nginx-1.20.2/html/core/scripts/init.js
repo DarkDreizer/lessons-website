@@ -16,6 +16,9 @@ switch(window.location.pathname){
   case '/lessons':
     routeToLoad = 'lessons';
     break;
+  case '/exercises':
+    routeToLoad = 'exercises';
+    break;
   default:
     routeToLoad = 'not-found';
 }
