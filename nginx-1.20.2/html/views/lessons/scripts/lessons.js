@@ -27,28 +27,36 @@ function searchByName(queryValue, preFilterList) {
   const query = queryValue.toLowerCase();
   let newList;
   if (!preFilterList) {
-    newList = lessonServiceInit.lessonsCache.filter((lesson) => lesson.title.toLowerCase().includes(query));
+    newList = applySearch(lessonServiceInit.lessonsCache, queryValue)
     filterLessons(filterSelect.value, newList);
   } else {
-    newList = preFilterList.filter((lesson) => lesson.title.toLowerCase().includes(query));
+    newList = applySearch(preFilterList, queryValue);
     renderLessons(newList);
   }
+}
+
+function applySearch(lessons, query) {
+  return lessons.filter((lesson) => lesson.title.toLowerCase().includes(query));
 }
 
 function filterLessons(filterValue, preSearchList) {
   const selectedFilter = filterValue;
   let newList;
   if (!preSearchList) {
-    newList = selectedFilter === 'todas' ? 
-    lessonServiceInit.lessonsCache : 
-    lessonServiceInit.lessonsCache.filter((lesson) => lesson.category.map((category) => category.toLowerCase()).includes(selectedFilter));
+    newList = applyFilter(lessonServiceInit.lessonsCache, selectedFilter);
     searchByName(searchLessons.value, newList);
   } else {
-    newList = selectedFilter === 'todas' ? 
-    preSearchList : 
-    preSearchList.filter((lesson) => lesson.category.map((category) => category.toLowerCase()).includes(selectedFilter));
+    newList = applyFilter(preSearchList, selectedFilter);
     renderLessons(newList);
   }
+}
+
+function applyFilter(lessons, filter) {
+  return filter === 'todas' ? 
+    lessons : 
+    lessons.filter((lesson) => {
+      return lesson.category.map((category) => category.toLowerCase()).includes(filter)
+    });
 }
 
 function renderLessons(lessons) {
