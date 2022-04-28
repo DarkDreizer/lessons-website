@@ -1,8 +1,18 @@
 export class LessonsService {
   _lessonsCache;
+  _lessonsCategories;
+  constructor() {}
 
   get lessonsCache() {
     return this._lessonsCache;
+  }
+
+  set categories(categoriesList) {
+    this._lessonsCategories = categoriesList;
+  }
+
+  get categories() {
+    return this._lessonsCategories;
   }
 
   async getLessons() {

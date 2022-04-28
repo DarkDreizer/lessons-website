@@ -1,0 +1,15 @@
+.exercises-container {
+  padding: 16px;
+}
+
+.question-container {
+  margin-bottom: 16px;
+}
+
+.form-group {
+  display: none;
+}
+
+.form-group.active {
+  display: block;
+}

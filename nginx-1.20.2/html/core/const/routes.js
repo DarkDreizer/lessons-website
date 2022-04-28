@@ -28,6 +28,16 @@ mainRoutes.set('lessons', {
   title: 'Lessons - List of lessons',
   displayURL: '/lessons',
   replace: false
+});
+
+mainRoutes.set('exercises', {
+  html: '../../views/exercises/exercises.html',
+  identifier: 'exercises',
+  style: '../../views/exercises/styles/exercises.css',
+  script: '../../views/exercises/scripts/exercises.js',
+  title: 'Lessons - Exercises',
+  displayURL: '/exercises',
+  replace: false
 })
 
 mainRoutes.set('not-found', {
