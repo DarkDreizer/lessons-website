@@ -38,6 +38,16 @@ mainRoutes.set('exercises', {
   title: 'Lessons - Exercises',
   displayURL: '/exercises',
   replace: false
+});
+
+mainRoutes.set('stackblitz', {
+  html: '../../views/stackblitz/stackblitz.html',
+  identifier: 'stackblitz',
+  style: '../../views/stackblitz/styles/stackblitz.css',
+  script: '../../views/stackblitz/scripts/stackblitz.js',
+  title: 'Lesson - Stackblitz',
+  displayURL: '/stackblitz',
+  replace: false
 })
 
 mainRoutes.set('not-found', {
