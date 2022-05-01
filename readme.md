@@ -8,7 +8,7 @@ Para que el navegador pueda leer el sitio web es necesario utilizar un servidor 
 Debido a que hicimos cambios en la aplicacion para hacerla una SPA es necesario que el servidor local sea capaz de redireccionar las rutas del sitio hacia el index.html.
 
 Actualmente el repositorio tiene la configuracion utilizando Nginx.
-Para utilizar el servidor es necesario acceder a la carpeta de nginx-1.20.2 y utilizar el comando `start nginx.exe`
+Para utilizar el servidor es necesario acceder a la carpeta de nginx-1.20.2 y utilizar el comando `start nginx`
 
 Esto levantara el servidor, el cual es una aplicacion de consola. Luego de esto se puede acceder al sitio en la ruta 127.0.0.1.
 Nginx no esta configurado para hacer hotreload, por lo que se recomienda refrescar el navegador con un "hard reload" para borrar el cache del estado en el que se encuentra.
