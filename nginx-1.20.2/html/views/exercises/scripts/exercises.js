@@ -1,3 +1,5 @@
+import { shuffleArray } from "../../../shared/scripts/fisher-yates-algorithm.js";
+
 const form = document.querySelector('#dynamic-form');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -6,23 +8,23 @@ form.addEventListener('submit', (event) => {
 
 function loadQuestions() {
   fetch('shared/const/questions.json')
-    .then((questions) => questions.json())
-    .then((questionArray) => renderForm(questionArray));
+    .then((form) => form.json())
+    .then((formInfo) => renderForm(shuffleForm(formInfo.questions), formInfo.questionsPerSection));
 }
 
 loadQuestions();
 
-function renderForm(questions) {
-  const numberOfSections = Math.ceil(questions.length / 2);
+function renderForm(questions, questionPerSections) {
+  const numberOfSections = Math.ceil(questions.length / questionPerSections);
   for (let i = 0; i < numberOfSections; i++) {
     const container = document.createElement('div');
     container.classList.add('form-group');
     container.id = `form-group-${i}`;
-    const firstQuestion = questions[i*2];
-    const secondQuestion = questions[i*2 + 1];
-    renderQuestion(firstQuestion, container);
-    if (secondQuestion) {
-      renderQuestion(secondQuestion, container);
+    for (let q = 0; q < questionPerSections; q++) {
+      const newQuestion = questions[i*questionPerSections + q];
+      if (newQuestion) {
+        renderQuestion(newQuestion, container);
+      }  
     }
 
     if (i !== 0){
@@ -144,4 +146,14 @@ function checkSubmitValidity(numberOfQuestions) {
   if (allQuestionAnswered) {
     document.querySelector('.submit-button').disabled = false;;
   }
+}
+
+function shuffleForm(questions) {
+  const questionsWithRandomAnswers = questions.map(question => {
+    return {
+      ...question,
+      answers: shuffleArray(question.answers)
+    }
+  });
+  return shuffleArray(questionsWithRandomAnswers);
 }
