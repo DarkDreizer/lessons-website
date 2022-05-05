@@ -22,6 +22,9 @@ switch(window.location.pathname){
   case '/stackblitz':
     routeToLoad = 'stackblitz';
     break;
+  case '/repositories':
+    routeToLoad = 'repositories';
+    break;
   default:
     routeToLoad = 'not-found';
 }
