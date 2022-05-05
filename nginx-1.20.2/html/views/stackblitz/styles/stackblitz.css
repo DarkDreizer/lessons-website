@@ -1,3 +1,17 @@
 .stackblitz-container {
   padding: 16px;
 }
+
+.active-stackblitz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active-stackblitz button {
+  display: inline-block;
+}
+
+.iframe-container {
+  border: 1px solid black;
+}

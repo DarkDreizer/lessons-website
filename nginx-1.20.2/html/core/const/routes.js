@@ -48,7 +48,17 @@ mainRoutes.set('stackblitz', {
   title: 'Lesson - Stackblitz',
   displayURL: '/stackblitz',
   replace: false
-})
+});
+
+mainRoutes.set('repositories', {
+  html: '../../views/repositories/repositories.html',
+  identifier: 'repositories',
+  style: '../../views/repositories/styles/repositories.css',
+  script: '../../views/repositories/scripts/repositories.js',
+  title: 'Lessons - Repositories',
+  displayURL: '/repositories',
+  replace: false
+});
 
 mainRoutes.set('not-found', {
   html: '../../views/not-found/not-found.html',
